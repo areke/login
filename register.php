@@ -1,6 +1,7 @@
 <?php
     require('includes/config.php');
     require('includes/functions.php');
+    require('includes/login.php');
     $content = "
     <form id = 'login' method = 'POST'>
     <table id = 'loginTable' style = 'margin-left: auto; margin-right:auto; margin-top: 100px;'>
@@ -46,8 +47,7 @@
         }
         
         if ($success) {
-            $_SESSION["username"] = $username;
-            $content = "<div class='alert alert-success' style = 'margin-top:100px; text-align:center;'>Successfully Registered Account ".$_SESSION['username']."</div>";
+            $content = "<div class='alert alert-success' style = 'margin-top:100px; text-align:center;'>Successfully registered account ".$_SESSION['username']."</div>";
             
         }
         echoPage("Login", $content, 1);

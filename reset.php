@@ -7,6 +7,7 @@
     require 'mail/SMTP.php';
     require('includes/config.php');
     require('includes/functions.php');
+    require('includes/login.php');
     $content = "
     <form id = 'login' method = 'POST'>
     <table id = 'loginTable' style = 'margin-left: auto; margin-right:auto; margin-top: 100px;'>

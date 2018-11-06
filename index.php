@@ -1,5 +1,6 @@
 <?php
     require('includes/config.php');
+    require('includes/login.php');
     require('includes/functions.php');
     $content = "
     <form id = 'login' method = 'POST'>
@@ -41,11 +42,9 @@
         if ($success) {
             $_SESSION["username"] = $username;
             header("Location: success.php");
-            die();
         }
         else {
             header("Location: failure.php");
-            die();
             $content .= "<div class='alert alert-error' style = 'margin-top:15px; text-align:center;'>You entered the wrong username and password combination. Please try again.</div>";
         }
         echoPage("Login", $content, 0);
