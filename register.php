@@ -37,7 +37,7 @@
             $salt = generateRandomString();
             $passwordnsalt = md5($password . $salt);
             $resetHash = generateRandomString(20);
-            $query = "INSERT INTO tbl_users (username, password, salt) VALUES ('$username', '$passwordnsalt', '$salt', '$resetHash')";
+            $query = "INSERT INTO tbl_users (username, password, salt, resetHash) VALUES ('$username', '$passwordnsalt', '$salt', '$resetHash')";
             mysql_query($query, $con) or die(mysql_error());
             $success = true;
             
