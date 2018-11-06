@@ -5,5 +5,6 @@ $dbusername = "root";
 $dbpassword = "root";
 $db_name = "CTF2";
 
-$emailuser = "";
+$email_username = "csci430team3@gmail.com";
+$email_password = "weakpassword";
 ?>

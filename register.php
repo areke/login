@@ -42,16 +42,13 @@
             $success = true;
             
         } else {
-            $content = "<div class='alert alert-error' style = 'margin-top:15px; text-align:center;'>Username already exists. Please try again.</div>";
+            $content .= "<div class='alert alert-error' style = 'margin-top:15px; text-align:center;'>Username already exists. Please try again.</div>";
         }
         
         if ($success) {
             $_SESSION["username"] = $username;
             $content = "<div class='alert alert-success' style = 'margin-top:100px; text-align:center;'>Successfully Registered Account ".$_SESSION['username']."</div>";
             
-        }
-        else {
-            $content .= "<div class='alert alert-error' style = 'margin-top:15px; text-align:center;'>Something went wrong. Please try again.</div>";
         }
         echoPage("Login", $content, 1);
     }

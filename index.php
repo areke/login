@@ -33,7 +33,7 @@
         $success = false;
         if ($num_rows == 1) {
             $row = mysql_fetch_row($result);
-            if (md5($password . $row[3]) == $row[2]) {
+            if (md5($password . $row[4]) == $row[2]) {
                 $success = true;
             }
         }
